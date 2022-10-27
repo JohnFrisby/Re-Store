@@ -1,14 +1,10 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React from "react";
 import './app.css';
-import ErrorBoundry from "../error-boundry";
 
-export default class App extends Component {
+const App = () => {
+    return (
+        <div>App</div>
+    );
+};
 
-    render() {
-        return (
-            <ErrorBoundry />
-        )
-    }
-    
-}
+export default App;
