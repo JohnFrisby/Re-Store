@@ -8,12 +8,12 @@ const App = () => {
         <Routes>
             <Route
                 path="/"
-                component={HomePage}
+                element={<HomePage />}
                 exact />
 
             <Route
                 path="/cart"
-                component={CartPage} />
+                element={<CartPage />} />
         </Routes>
     );
 };
