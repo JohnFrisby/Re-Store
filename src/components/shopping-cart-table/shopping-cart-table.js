@@ -43,11 +43,10 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
                     </tr>
                 </thead>
                 <tbody>
-                    {
-                        items.map(renderRow)
-                    };
+                    {items.map(renderRow)}
                 </tbody>
             </table>
+            
             <div className="total">
                 Total: ${total}
             </div>
@@ -55,8 +54,8 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
     );
 };
 
-const mapStateToProps = ({ cartItems, orderTotal}) => {
-    return{
+const mapStateToProps = ({ cartItems, orderTotal }) => {
+    return {
         items: cartItems,
         total: orderTotal
     };
@@ -74,6 +73,6 @@ const mapDispatchToProps = () => {
             console.log(`Delete ${id}`);
         }
     }
-}; 
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartTable);

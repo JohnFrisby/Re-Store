@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import BookListItem from '../book-list-item/book-list-item';
+
 import { connect } from "react-redux";
 
 import { withBookStoreService } from '../hoc';
@@ -19,7 +20,7 @@ const BookList = ({ books, onAddedToCart }) => {
                         <BookListItem 
                             book={book}
                             onAddedToCart={() => onAddedToCart(book.id)} /></li>
-                    )
+                    );
                 })
             }
         </ul>

@@ -18,11 +18,11 @@ const booksError = (error) => {
     };
 };
 
-export const bookAddedToCart = (bookId) =>{
+export const bookAddedToCart = (bookId) => {
     return {
         type: 'BOOK_ADDED_TO-CART',
         payload: bookId
-    }
+    };
 };
 
 const fetchBooks = (bookstoreService, dispatch) => () => {
