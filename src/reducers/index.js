@@ -13,7 +13,13 @@ const updateCartItems = (cartItems, item, idx) => {
             item
         ];
     }
-}
+
+    return [
+        ...cartItems.slice(0, idx),
+        item,
+        ...cartItems.slice(idx + 1)
+    ];
+};
 
 const updateCartItem = (book, item = {}) => {
     const {
