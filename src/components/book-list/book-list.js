@@ -17,9 +17,10 @@ const BookList = ({ books, onAddedToCart }) => {
                 books.map((book) => {
                     return (
                         <li key={book.id}>
-                        <BookListItem 
-                            book={book}
-                            onAddedToCart={() => onAddedToCart(book.id)} /></li>
+                            <BookListItem
+                                book={book}
+                                onAddedToCart={() => onAddedToCart(book.id)} />
+                        </li>
                     );
                 })
             }
@@ -33,19 +34,19 @@ class BookListContainer extends Component {
         this.props.fetchBooks();
     }
     render() {
-        const { books, loading, error, onAddedToCart} = this.props;
+        const { books, loading, error, onAddedToCart } = this.props;
 
         if (loading) {
             return <Spinner />;
         }
-        else if (error) {
+        if (error) {
             return <ErrorIndicator />;
-        } 
-        return <BookList books={books} onAddedToCart={onAddedToCart}/>;
+        }
+        return <BookList books={books} onAddedToCart={onAddedToCart} />;
     }
 }
 
-const mapStateToProps = ({ BookList: {books, loading, error} }) => {
+const mapStateToProps = ({ bookList: { books, loading, error } }) => {
     return { books, loading, error };
 };
 
