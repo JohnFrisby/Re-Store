@@ -66,7 +66,7 @@ const updateShoppingCart = (state, action) => {
             return updateOrder(state, action.payload, -1);
 
         case 'ALL_BOOKS_REMOVED_FROM_CART':
-            const item = state.shopingCart.cartItems.find(({ id }) => id === action.payload);
+            const item = state.shoppingCart.cartItems.find(({ id }) => id === action.payload);
             return updateOrder(state, action.payload, -item.count);
 
     default:
