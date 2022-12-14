@@ -5,7 +5,7 @@ export default class BookstoreService {
             title: 'Production-Ready Microservices',
             author: 'Susan J. Fowler',
             price: 32,
-            coverImage: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1532878673l/40976702._SX318_.jpg'
+            coverImage: 'https://m.media-amazon.com/images/I/41yJ75gpV-L._AC_SY780_.jpg'
         },
         {
             id: 2,
